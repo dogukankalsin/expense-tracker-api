@@ -18,16 +18,17 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table(name = "expenses")
+//masraf
 public class Expense {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
     private String title;
 
     private String description;
 
     private BigDecimal amount;
-
+    @Enumerated(EnumType.STRING)
     private ExpenseCategory category;
 
     private LocalDate expenseDate;

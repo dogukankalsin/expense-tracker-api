@@ -1,0 +1,4 @@
+package com.roadmap.expense_tracker.dto;
+
+public record LoginRequest(String email, String password) {
+}
